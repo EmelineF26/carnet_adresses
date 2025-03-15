@@ -1,0 +1,11 @@
+index:
+    path: /
+    defaults:
+        _controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController
+        route: hello
+        permanent: true
+
+
+controllers:
+    resource: ../src/Controller/
+    type: attribute
