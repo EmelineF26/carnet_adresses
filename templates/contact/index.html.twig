@@ -4,6 +4,17 @@
 
 {% block body %}
 <h1>Ma liste de contacts :</h1>
-<h2>Contact numéro 1 :</h2>
+
+{% for contact in contacts %}
+Contact numéro :
+{{ contact.id }}<br />
+Nom : {{ contact.name }}<br />
+Téléphone : {{ contact.phone }}<br />
+Email : {{ contact.email }}<br />
+Anniversaire : {{ contact.birthday|date("d/m/Y", "Europe/Paris") }}<br />
+Note : {{ contact.note }}<br />
+Catégorie : {{ contact.category }}<br /><br />
+{% endfor %}
+
 <button><a href='/'>Retour accueil</a></button>
 {% endblock %}

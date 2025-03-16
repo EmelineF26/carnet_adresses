@@ -2,7 +2,16 @@
 
 {% block title %}Ajouter un contact{% endblock %}
 
+{% block stylesheets %}
+//Lier les fichiers CSS ici
+{% endblock %}
+
 {% block body %}
 <h1>Formulaire d'ajout de contact :</h1>
+{{ form_start(form) }}
+{{ form_errors(form) }}
+{{ form_widget(form) }}
+<button type="submit">Enregistrer le contact</button>
+{{ form_end(form) }}
 <button><a href='/'>Retour accueil</a></button>
 {% endblock %}
