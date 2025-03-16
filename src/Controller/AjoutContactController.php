@@ -19,7 +19,7 @@ class AjoutContactController extends AbstractController
     * 
     */
     #[Route('/ajout_contact', name: 'ajout_contact')]
-    public function NewContact(Request $request, EntityManagerInterface $entitymanager): Response
+    public function NewContact(Request $request, EntityManagerInterface $entityManager): Response
     {
         //Création du formulaire
         $contact = new Contact();
@@ -30,8 +30,8 @@ class AjoutContactController extends AbstractController
         {
             //Enregistrer les données du contact dans la BDD
             $contact = $form->getData();
-            $entitymanager->persist($contact);
-            $entitymanager->flush();
+            $entityManager->persist($contact);
+            $entityManager->flush();
             //Rediriger vers l'accueil une fois le formulaire saisi et enregistré
             return $this->redirectToRoute('hello');
         }
