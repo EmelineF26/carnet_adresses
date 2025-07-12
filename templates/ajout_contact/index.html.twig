@@ -4,14 +4,48 @@
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/mon_fichier.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Playwrite+VN+Guides&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
-<h1 class="test">Formulaire d'ajout de contact :</h1>
-{{ form_start(form) }}
-{{ form_errors(form) }}
-{{ form_widget(form) }}
-<button type="submit">Enregistrer le contact</button>
+<h1 class="title">Formulaire d'ajout de contact :</h1>
+
+<div class="formulaire">
+    <div class="champ">
+        {{ form_label(form.Name) }}
+        {{ form_widget(form.Name) }}
+        {{ form_errors(form.Name) }}
+    </div>
+    <div class="champ">
+        {{ form_label(form.Phone) }}
+        {{ form_widget(form.Phone) }}
+        {{ form_errors(form.Phone) }}
+    </div>
+    <div class="champ">
+        {{ form_label(form.Email) }}
+        {{ form_widget(form.Email) }}
+        {{ form_errors(form.Email) }}
+    </div>
+    <div class="champ">
+        {{ form_label(form.Birthday) }}
+        {{ form_widget(form.Birthday) }}
+        {{ form_errors(form.Birthday) }}
+    </div>
+    <div class="champ">
+        {{ form_label(form.Note) }}
+        {{ form_widget(form.Note) }}
+        {{ form_errors(form.Note) }}
+    </div>
+    <div class="champ">
+        {{ form_label(form.Category) }}
+        {{ form_widget(form.Category) }}
+        {{ form_errors(form.Category) }}
+    </div>
+</div>
+
+<button type="submit" class="button">Enregistrer le contact</button>
 {{ form_end(form) }}
-<button><a href='/'>Retour accueil</a></button>
+<a href='/' class="button">Retour accueil</a>
 {% endblock %}

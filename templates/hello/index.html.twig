@@ -2,10 +2,17 @@
 
 {% block title %}Mon carnet d'adresses{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style_hello.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Playwrite+VN+Guides&display=swap" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
-<h1>Bienvenue sur mon appli de carnet d'adresse !</h1>
-<button><a href='affichage_contact'>Afficher les contacts</a></button>
-<button><a href='ajout_contact'>Ajouter un contact</a></button>
-<button><a href='modifier_contact'>Modifier un contact</a></button>
-<button><a href='supprimer_contact'>Supprimer un contact</a></button>
+<h1 class="title">Bienvenue sur mon appli de carnet d'adresse !</h1>
+<a href='affichage_contact' class="button">Afficher les contacts</a>
+<a href='ajout_contact' class="button">Ajouter un contact</a>
+<a href='modifier_contact' class="button">Modifier un contact</a>
+<a href='supprimer_contact' class="button">Supprimer un contact</a>
 {% endblock %}
