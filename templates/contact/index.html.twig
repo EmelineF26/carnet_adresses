@@ -2,8 +2,15 @@
 
 {% block title %}Mes contacts :{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style_affichage.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Playwrite+VN+Guides&display=swap" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
-<h1>Ma liste de contacts :</h1>
+<h1 class="title">Ma liste de contacts :</h1>
 
 {% for contact in contacts %}
 Contact numéro :
