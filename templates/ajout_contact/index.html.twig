@@ -3,11 +3,11 @@
 {% block title %}Ajouter un contact{% endblock %}
 
 {% block stylesheets %}
-//Lier les fichiers CSS ici
+    <link rel="stylesheet" href="{{ asset('css/mon_fichier.css') }}">
 {% endblock %}
 
 {% block body %}
-<h1>Formulaire d'ajout de contact :</h1>
+<h1 class="test">Formulaire d'ajout de contact :</h1>
 {{ form_start(form) }}
 {{ form_errors(form) }}
 {{ form_widget(form) }}

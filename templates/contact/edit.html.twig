@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un contact{% endblock %}
+
+{% block body %}
+    <h1>Modification du contact :</h1>
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button>{{ button_label|default('Mise à jour') }}</button>
+    {{ form_end(form) }}
+{% endblock %}
