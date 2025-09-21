@@ -12,16 +12,21 @@
 {% block body %}
 <h1 class="title">Ma liste de contacts :</h1>
 
-{% for contact in contacts %}
-Contact numéro :
-{{ contact.id }}<br />
-Nom : {{ contact.name }}<br />
-Téléphone : {{ contact.phone }}<br />
-Email : {{ contact.email }}<br />
-Anniversaire : {{ contact.birthday|date("d/m/Y", "Europe/Paris") }}<br />
-Note : {{ contact.note }}<br />
-Catégorie : {{ contact.category }}<br /><br />
-{% endfor %}
+<div class="liste-contacts">
+    {% for contact in contacts %}
+        <div class="contact">
+            <h2>Contact n°{{ contact.id }}</h2>
+            <p><strong>Nom :</strong> {{ contact.name }}</p>
+            <p><strong>Téléphone :</strong> {{ contact.phone }}</p>
+            <p><strong>Email :</strong> {{ contact.email }}</p>
+            <p><strong>Anniversaire :</strong> {{ contact.birthday|date("d/m/Y", "Europe/Paris") }}</p>
+            <p><strong>Note :</strong> {{ contact.note }}</p>
+            <p><strong>Catégorie :</strong> {{ contact.category }}</p>
+        </div>
+    {% else %}
+        <p>Aucun contact à afficher.</p>
+    {% endfor %}
+</div>
 
-<button><a href='/'>Retour accueil</a></button>
+<a href='/' class="button">Retour accueil</a>
 {% endblock %}

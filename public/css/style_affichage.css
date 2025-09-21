@@ -8,10 +8,56 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 8px;
+    font-size: 23px;
 }
 
 .title {
     color: blue;
     font-size: 30px;
     padding: 20px;
+}
+
+.liste-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.contact {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    font-size: 29px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    margin: 5px 0;
+    font-size: 19px;
+}
+
+.contact strong {
+    color: #555;
+    font-size: 21px;
+}
+
+.button {
+    margin-top: 45px;
+    border: 2px solid;
+    border-radius: 28px;
+    padding: 12px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+button {
+    margin-top: 18px;
 }

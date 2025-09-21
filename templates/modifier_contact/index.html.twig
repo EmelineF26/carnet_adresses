@@ -2,8 +2,15 @@
 
 {% block title %}Modifier un contact{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style_modifier.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Playwrite+VN+Guides&display=swap" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
-<h1>Modifier un contact :</h1>
+<h1 class="title">Modifier un contact :</h1>
 {% for contact in contacts %}
 Contact numéro :
 {{ contact.id }}<br />
